@@ -4,20 +4,20 @@ class Demo{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Size 1st arr:");
-		int s1=sc.nextInt();
-		System.out.println("Size 2nd arr:");
-		int s2=sc.nextInt();
+		System.out.println("Enter s1:");
+		int s1 = sc.nextInt();
+		System.out.println("Enter s2:");
+		int s2 = sc.nextInt();
 
 		int a1[] = new int[s1];
 		int a2[] = new int[s2];
 
-		System.out.println("Elements of a1:");
+		System.out.println("Enter elements of a1:");
 		for(int i=0;i<a1.length;i++){
 			a1[i]=sc.nextInt();
 		}
-		System.out.println("Elements of a2:");
-		for(int i=0;i<a2.length;i++){
+		System.out.println("Enter elements of a2:");
+                for(int i=0;i<a2.length;i++){
                         a2[i]=sc.nextInt();
                 }
 
@@ -29,8 +29,8 @@ class Demo{
 		int c=0;
 
 		while(k>=0){
-			int d = 0;
-			int alv = i>=0 ? a1[i]:0;
+			int d=0;
+			int alv = i>=0?a1[i] : 0;
 
 			if(a2[j]+c >= alv){
 				d = a2[j]+c-alv;
@@ -39,9 +39,9 @@ class Demo{
 				d = a2[j]+c+10-alv;
 				c=-1;
 			}
-			diff[k]=d;
 
-			k--;i--;j--;
+			diff[k] = d;
+			i--;j--;k--;
 		}
 		int indx = 0;
 		while(indx < diff.length){
@@ -56,5 +56,6 @@ class Demo{
 			System.out.print(diff[indx]);
 			indx++;
 		}
+		System.out.println();
 	}
 }
